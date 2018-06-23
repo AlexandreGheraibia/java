@@ -36,29 +36,28 @@ public class Parcours {
 			System.out.println("");
 		}
 	}
+	public static void triangleEquiI(int n, int decal, boolean estNonVide) {
+		for (int j = 0; j < n; j++) {
+			for (int i = 0; i < j + 1 + decal; i++) {
+				System.out.print(" ");
+			}
+
+			for (int i = 0; i < 2 * (n - j) - 1; i++) {
+				if (estNonVide || (i == 0 || i == 2 * (n - j) - 2)) {
+					System.out.print("*");
+				} else {
+					System.out.print(" ");
+				}
+
+			}
+
+			System.out.println("");
+
+		}
+	}
 	public static void triangleEquiM(int n,int m, int decal, boolean estNonVide) {
 		
-			for (int j = 0; j < n; j++) {
-				for(int k=0;k<m;k++) {
-					for (int i = 0; i < n - j + (k>0?0:decal); i++) {
-						System.out.print(" ");
-					}
-					System.out.print("*");
-					for (int i = 0; i < 2 * j; i++) {
-						if (estNonVide || i == (2 * j - 1)) {
-							System.out.print("*");
-						} else {
-							System.out.print(" ");
-						}
-		
-					}
-					for (int i =  n - j -1; i>0; i--) {
-						System.out.print(" ");
-					}
-					
-				}
-				System.out.println("");
-			}
+		triangleEquiM(n,m,0,decal, estNonVide);
 		
 	}
 	public static void triangleEquiM(int n,int m,int trans, int decal, boolean estNonVide) {
@@ -88,27 +87,7 @@ public class Parcours {
 }
 	
 	public static void triangleEquiIM(int n,int m, int decal, boolean estNonVide) {
-		for (int j = 0; j < n; j++) {
-			for(int k=0;k<m;k++) {
-				for (int i = 0; i < j + 1 + (k>0?0:decal); i++) {
-					System.out.print(" ");
-				}
-	
-				for (int i = 0; i < 2 * (n - j) - 1; i++) {
-					if (estNonVide || (i == 0 || i == 2 * (n - j) - 2)) {
-						System.out.print("*");
-					} else {
-						System.out.print(" ");
-					}
-	
-				}
-				for (int i = j  ; i >0 ; i--) {
-					System.out.print(" ");
-				}
-			}
-			System.out.println("");
-
-		}
+		 triangleEquiIM(n,m,0,decal, estNonVide);
 	}
 	public static void triangleEquiIM(int n,int m,int trans, int decal, boolean estNonVide) {
 		for (int j = 0; j < n; j++) {
@@ -134,25 +113,7 @@ public class Parcours {
 		}
 	}
 
-	public static void triangleEquiI(int n, int decal, boolean estNonVide) {
-		for (int j = 0; j < n; j++) {
-			for (int i = 0; i < j + 1 + decal; i++) {
-				System.out.print(" ");
-			}
-
-			for (int i = 0; i < 2 * (n - j) - 1; i++) {
-				if (estNonVide || (i == 0 || i == 2 * (n - j) - 2)) {
-					System.out.print("*");
-				} else {
-					System.out.print(" ");
-				}
-
-			}
-
-			System.out.println("");
-
-		}
-	}
+	
 
 	public static void losange(int n, int decal, boolean estNonVideH, boolean estNonVideB) {
 		if (estNonVideB) {
