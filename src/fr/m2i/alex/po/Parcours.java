@@ -65,7 +65,7 @@ public class Parcours {
 		
 		for (int j = 0; j < n; j++) {
 			for(int k=0;k<m;k++) {
-				for (int i = 0; i < n - j + (k>0?0:decal); i++) {
+				for (int i =k==0?n-j:0; i <2*(n-j) + (k>0?0:decal); i++) {
 					System.out.print(" ");
 				}
 				System.out.print("*");
@@ -77,9 +77,7 @@ public class Parcours {
 					}
 	
 				}
-				for (int i =  n - j -1+trans; i>0; i--) {
-					System.out.print(" ");
-				}
+				
 				
 			}
 			System.out.println("");
@@ -93,7 +91,7 @@ public class Parcours {
 	public static void triangleEquiIM(int n,int m,int trans, int decal, boolean estNonVide) {
 		for (int j = 0; j < n; j++) {
 			for(int k=0;k<m;k++) {
-				for (int i = 0; i < j + 1 + (k>0?0:decal); i++) {
+				for (int i = k==0?j+1:0; i < 2*j + 2 + (k>0?0:decal); i++) {
 					System.out.print(" ");
 				}
 	
@@ -105,9 +103,7 @@ public class Parcours {
 					}
 	
 				}
-				for (int i = j+trans  ; i >0 ; i--) {
-					System.out.print(" ");
-				}
+				
 			}
 			System.out.println("");
 
@@ -116,11 +112,11 @@ public class Parcours {
 
 	public static void losangeCroissant(int n,boolean sap) {
 		for(int i=1;i<=n;i++)
-		losangeM(n-1,i,0,n*(n-i+1),i%(n+1)!=1||sap,i%n==0||sap);
+		losangeM(n,i,0,n*(n-i),i%(n+1)!=1||sap,i%n==0||sap);
 	}
 	public static void losangeDecroissant(int n,boolean sap) {
 		for(int i=n;i>=0;i--)
-		losangeM(n-1,i,0,n*(n-i+1),i%(n+1)!=1||sap,i%n==0||sap);
+		losangeM(n,i,0,n*(n-i),i%(n+1)!=1||sap,i%n==0||sap);
 	}
 
 	public static void losange(int n, int decal, boolean estNonVideH, boolean estNonVideB) {
@@ -133,11 +129,11 @@ public class Parcours {
 	
 	public static void losangeM(int n,int m,int trans, int decal, boolean estNonVideH,boolean estNonVideB) {
 		if (estNonVideB) {
-			triangleEquiM(n,m,2+trans, 1 + decal, estNonVideH);
-			triangleEquiIM(n+1,m,trans, decal, estNonVideB);
+			triangleEquiM(n,m,trans, decal, estNonVideH);
+			triangleEquiIM(n,m,trans, decal, estNonVideB);
 		} else {
-			triangleEquiM(n + 1,m,trans, decal, estNonVideH);
-			triangleEquiIM(n,m,2+trans, decal +1, estNonVideB);
+			triangleEquiM(n,m,trans, decal, estNonVideH);
+			triangleEquiIM(n,m,trans, decal , estNonVideB);
 		}
 	}
 	
@@ -173,8 +169,8 @@ public class Parcours {
 		System.out.println(" ");
 		losangeM(5,10,5, 0,false,true);
 		losangeM(0,5,15, 10,true,true);*/
-		losangeCroissant(5,true);
-		losangeDecroissant(5,true);
+		losangeCroissant(6,false);
+		losangeDecroissant(6,true);
 		
 	}
 
