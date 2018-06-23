@@ -116,7 +116,7 @@ public class Parcours {
 
 	public static void losangeCroissant(int n) {
 		for(int i=1;i<n;i++)
-		losangeM(5,i,0,n*(n-i+1),i%(n+1)!=1,i%n==0);
+		losangeM(n-1,i,0,n*(n-i+1),i%(n+1)!=1,i%n==0);
 	}
 	public static void losangeDroissant(int n) {
 		for(int i=n;i>0;i--)
