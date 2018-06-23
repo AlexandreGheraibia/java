@@ -113,7 +113,10 @@ public class Parcours {
 		}
 	}
 
-	
+	public static void losangeCroissant(int n) {
+		for(int i=n;i>0;i--)
+		losangeM(5,i,0,n*(n-i+1),i%2==1,i%2==0);
+	}
 
 	public static void losange(int n, int decal, boolean estNonVideH, boolean estNonVideB) {
 		losangeM(n,1,0,decal,estNonVideH,estNonVideB);
@@ -141,7 +144,7 @@ public class Parcours {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		triangleRec(5);
+	/*	triangleRec(5);
 		System.out.println(" ");
 		triangleRecI(3);
 		System.out.println(" ");
@@ -164,8 +167,8 @@ public class Parcours {
 		losangeM(5,10,0, 16,true,false);
 		System.out.println(" ");
 		losangeM(5,10,5, 0,false,true);
-		losangeM(0,5,15, 10,true,true);
-		
+		losangeM(0,5,15, 10,true,true);*/
+		losangeCroissant(5);
 		
 	}
 
