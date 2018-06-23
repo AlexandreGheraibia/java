@@ -85,7 +85,7 @@ public class Parcours {
 		}
 	
 }
-	
+
 	public static void triangleEquiIM(int n,int m, int decal, boolean estNonVide) {
 		 triangleEquiIM(n,m,0,decal, estNonVide);
 	}
@@ -116,17 +116,13 @@ public class Parcours {
 	
 
 	public static void losange(int n, int decal, boolean estNonVideH, boolean estNonVideB) {
-		if (estNonVideB) {
-			triangleEqui(n, 1 + decal, estNonVideH);
-			triangleEquiI(n + 1, decal, estNonVideB);
-		} else {
-			triangleEqui(n + 1, decal, estNonVideH);
-			triangleEquiI(n, decal + 1, estNonVideB);
-		}
+		losangeM(n,1,0,decal,estNonVideH,estNonVideB);
 	}
+	
 	public static void losange(int n, int decal, boolean estNonVide) {
-		losange(n, decal,estNonVide,estNonVide);
+		losangeM(n,1,0,decal,estNonVide,estNonVide);
 	}
+	
 	public static void losangeM(int n,int m,int trans, int decal, boolean estNonVideH,boolean estNonVideB) {
 		if (estNonVideB) {
 			triangleEquiM(n,m,2+trans, 1 + decal, estNonVideH);
@@ -169,6 +165,7 @@ public class Parcours {
 		System.out.println(" ");
 		losangeM(5,10,5, 0,false,true);
 		losangeM(0,5,15, 10,true,true);
+		
 		
 	}
 
