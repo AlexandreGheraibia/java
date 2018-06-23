@@ -115,7 +115,7 @@ public class Parcours {
 
 	public static void losangeCroissant(int n) {
 		for(int i=n;i>0;i--)
-		losangeM(5,i,0,n*(n-i+1),i%2==1,i%2==0);
+		losangeM(5,i,0,n*(n-i+1),i%(n+1)!=1,i%n==0);
 	}
 
 	public static void losange(int n, int decal, boolean estNonVideH, boolean estNonVideB) {
