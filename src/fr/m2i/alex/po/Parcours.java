@@ -1,6 +1,7 @@
 package fr.m2i.alex.po;
 
 public class Parcours {
+	static String[] symb= {"a","l","e","x"};
 	public static void triangleRec(int n) {
 		for (int j = 0; j < n; j++) {
 			for (int i = 0; i <= j; i++) {
@@ -13,7 +14,7 @@ public class Parcours {
 	public static void triangleRecI(int n) {
 		for (int j = 0; j < n; j++) {
 			for (int i = 0; i < n - j; i++) {
-				System.out.print("*");
+				System.out.print(symb[i%4]);
 			}
 			System.out.println("");
 		}
@@ -98,7 +99,7 @@ public class Parcours {
 	
 				for (int i = 0; i < 2 * (n - j) - 1; i++) {
 					if (estNonVide || (i == 0 || i == 2 * (n - j) - 2)) {
-						System.out.print("*");
+						System.out.print(symb[j%4]);
 					} else {
 						System.out.print(" ");
 					}
@@ -114,6 +115,10 @@ public class Parcours {
 	}
 
 	public static void losangeCroissant(int n) {
+		for(int i=1;i<n;i++)
+		losangeM(5,i,0,n*(n-i+1),i%(n+1)!=1,i%n==0);
+	}
+	public static void losangeDroissant(int n) {
 		for(int i=n;i>0;i--)
 		losangeM(5,i,0,n*(n-i+1),i%(n+1)!=1,i%n==0);
 	}
