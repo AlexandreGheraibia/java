@@ -168,7 +168,7 @@ public class Parcours {
 		System.out.println(" ");
 		losangeM(5,10,5, 0,false,true);
 		losangeM(0,5,15, 10,true,true);*/
-		losangeCroissant(5);
+		losangeCroissant(6);
 		
 	}
 
