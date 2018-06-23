@@ -1,7 +1,7 @@
 package fr.m2i.alex.po;
 
 public class Parcours {
-	static String[] symb= {"s","a","p","i","n"};
+	static String[] symb= {"c","a","r","r","e"};
 	public static void triangleRec(int n) {
 		for (int j = 0; j < n; j++) {
 			for (int i = 0; i <= j; i++) {
@@ -114,13 +114,13 @@ public class Parcours {
 		}
 	}
 
-	public static void losangeCroissant(int n) {
-		for(int i=1;i<n;i++)
-		losangeM(n-1,i,0,n*(n-i+1),i%(n+1)!=1,i%n==0);
+	public static void losangeCroissant(int n,boolean sap) {
+		for(int i=1;i<=n;i++)
+		losangeM(n-1,i,0,n*(n-i+1),i%(n+1)!=1||sap,i%n==0||sap);
 	}
-	public static void losangeDroissant(int n) {
-		for(int i=n;i>0;i--)
-		losangeM(5,i,0,n*(n-i+1),i%(n+1)!=1,i%n==0);
+	public static void losangeDecroissant(int n,boolean sap) {
+		for(int i=n;i>=0;i--)
+		losangeM(n-1,i,0,n*(n-i+1),i%(n+1)!=1||sap,i%n==0||sap);
 	}
 
 	public static void losange(int n, int decal, boolean estNonVideH, boolean estNonVideB) {
@@ -173,7 +173,8 @@ public class Parcours {
 		System.out.println(" ");
 		losangeM(5,10,5, 0,false,true);
 		losangeM(0,5,15, 10,true,true);*/
-		losangeCroissant(6);
+		losangeCroissant(5,true);
+		losangeDecroissant(5,true);
 		
 	}
 
