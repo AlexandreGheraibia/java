@@ -3,6 +3,10 @@ package fr.m2i.alex.po;
 import java.util.Scanner;
 
 public class Main {
+	/*
+	 * priorite calcul la prioritée des operateurs mathematique 
+	 * de base
+	 * */
 	public static double priopOperateur(String saisie){                                                        
 		String[] result=saisie.split("[+]");                  
 		double somme=0;
