@@ -1,7 +1,7 @@
 package fr.m2i.alex.po;
 
 public class Parcours {
-	static String[] symb= {"a","l","e","x"};
+	static String[] symb= {"s","a","p","i","n"};
 	public static void triangleRec(int n) {
 		for (int j = 0; j < n; j++) {
 			for (int i = 0; i <= j; i++) {
@@ -99,7 +99,7 @@ public class Parcours {
 	
 				for (int i = 0; i < 2 * (n - j) - 1; i++) {
 					if (estNonVide || (i == 0 || i == 2 * (n - j) - 2)) {
-						System.out.print(symb[j%4]);
+						System.out.print(symb[j%5]);
 					} else {
 						System.out.print(" ");
 					}
