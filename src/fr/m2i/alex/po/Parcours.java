@@ -65,7 +65,7 @@ public class Parcours {
 		
 		for (int j = 0; j < n; j++) {
 			for(int k=0;k<m;k++) {
-				for (int i =k==0?n-j:0; i <2*(n-j) + (k>0?0:decal); i++) {
+				for (int i =k==0?n-j:0; i <2*(n-j) + (k>0?0:decal)+trans; i++) {
 					System.out.print(" ");
 				}
 				System.out.print("*");
@@ -91,7 +91,7 @@ public class Parcours {
 	public static void triangleEquiIM(int n,int m,int trans, int decal, boolean estNonVide) {
 		for (int j = 0; j < n; j++) {
 			for(int k=0;k<m;k++) {
-				for (int i = k==0?j+1:0; i < 2*j + 2 + (k>0?0:decal); i++) {
+				for (int i = k==0?j+1:0; i < 2*j + 2 + (k>0?0:decal)+trans; i++) {
 					System.out.print(" ");
 				}
 	
@@ -112,11 +112,11 @@ public class Parcours {
 
 	public static void losangeCroissant(int n,boolean sap) {
 		for(int i=1;i<=n;i++)
-		losangeM(n,i,0,n*(n-i),i%(n+1)!=1||sap,i%n==0||sap);
+		losangeM(n,i,0,n*(n-i+1),i%(n+1)!=1||sap,i%n==0||sap);
 	}
 	public static void losangeDecroissant(int n,boolean sap) {
 		for(int i=n;i>=0;i--)
-		losangeM(n,i,0,n*(n-i),i%(n+1)!=1||sap,i%n==0||sap);
+		losangeM(n,i,0,n*(n-i+1),i%(n+1)!=1||sap,i%n==0||sap);
 	}
 
 	public static void losange(int n, int decal, boolean estNonVideH, boolean estNonVideB) {
@@ -145,7 +145,7 @@ public class Parcours {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-	/*	triangleRec(5);
+		/*triangleRec(5);
 		System.out.println(" ");
 		triangleRecI(3);
 		System.out.println(" ");
@@ -169,8 +169,9 @@ public class Parcours {
 		System.out.println(" ");
 		losangeM(5,10,5, 0,false,true);
 		losangeM(0,5,15, 10,true,true);*/
-		losangeCroissant(6,false);
-		losangeDecroissant(6,true);
+		losangeCroissant(5,false);
+		losangeDecroissant(4,true);
+		
 		
 	}
 
