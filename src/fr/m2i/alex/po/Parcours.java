@@ -170,7 +170,7 @@ public class Parcours {
 		losangeM(5,10,5, 0,false,true);
 		losangeM(0,5,15, 10,true,true);*/
 		losangeCroissant(5,false);
-		losangeDecroissant(4,true);
+		losangeDecroissant(5,true);
 		
 		
 	}
