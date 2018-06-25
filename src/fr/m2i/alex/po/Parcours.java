@@ -1,6 +1,7 @@
 package fr.m2i.alex.po;
 
 public class Parcours {
+	/*test m2i*/
 	static String[] symb= {"c","a","r","r","e"};
 	public static void triangleRec(int n) {
 		for (int j = 0; j < n; j++) {
