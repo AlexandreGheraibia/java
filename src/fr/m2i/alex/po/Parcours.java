@@ -38,6 +38,8 @@ public class Parcours {
 			System.out.println("");
 		}
 	}
+	
+	
 	public static void triangleEquiI(int n, int decal, boolean estNonVide) {
 		for (int j = 0; j < n; j++) {
 			for (int i = 0; i < j + 1 + decal; i++) {
@@ -175,6 +177,107 @@ public class Parcours {
 		
 		
 	}
-
+/*trace d'éxécution*/
+	                      *
+                             * *
+                            *   *
+                           *     *
+                          *       *
+                          c       c
+                           a     a
+                            r   r
+                             r r
+                              e
+                         *          *
+                        ***        ***
+                       *****      *****
+                      *******    *******
+                     *********  *********
+                     c       c  c       c
+                      a     a    a     a
+                       r   r      r   r
+                        r r        r r
+                         e          e
+                    *          *          *
+                   ***        ***        ***
+                  *****      *****      *****
+                 *******    *******    *******
+                *********  *********  *********
+                c       c  c       c  c       c
+                 a     a    a     a    a     a
+                  r   r      r   r      r   r
+                   r r        r r        r r
+                    e          e          e
+               *          *          *          *
+              ***        ***        ***        ***
+             *****      *****      *****      *****
+            *******    *******    *******    *******
+           *********  *********  *********  *********
+           c       c  c       c  c       c  c       c
+            a     a    a     a    a     a    a     a
+             r   r      r   r      r   r      r   r
+              r r        r r        r r        r r
+               e          e          e          e
+          *          *          *          *          *
+         ***        ***        ***        ***        ***
+        *****      *****      *****      *****      *****
+       *******    *******    *******    *******    *******
+      *********  *********  *********  *********  *********
+      ccccccccc  ccccccccc  ccccccccc  ccccccccc  ccccccccc
+       aaaaaaa    aaaaaaa    aaaaaaa    aaaaaaa    aaaaaaa
+        rrrrr      rrrrr      rrrrr      rrrrr      rrrrr
+         rrr        rrr        rrr        rrr        rrr
+          e          e          e          e          e
+          *          *          *          *          *
+         ***        ***        ***        ***        ***
+        *****      *****      *****      *****      *****
+       *******    *******    *******    *******    *******
+      *********  *********  *********  *********  *********
+      ccccccccc  ccccccccc  ccccccccc  ccccccccc  ccccccccc
+       aaaaaaa    aaaaaaa    aaaaaaa    aaaaaaa    aaaaaaa
+        rrrrr      rrrrr      rrrrr      rrrrr      rrrrr
+         rrr        rrr        rrr        rrr        rrr
+          e          e          e          e          e
+               *          *          *          *
+              ***        ***        ***        ***
+             *****      *****      *****      *****
+            *******    *******    *******    *******
+           *********  *********  *********  *********
+           ccccccccc  ccccccccc  ccccccccc  ccccccccc
+            aaaaaaa    aaaaaaa    aaaaaaa    aaaaaaa
+             rrrrr      rrrrr      rrrrr      rrrrr
+              rrr        rrr        rrr        rrr
+               e          e          e          e
+                    *          *          *
+                   ***        ***        ***
+                  *****      *****      *****
+                 *******    *******    *******
+                *********  *********  *********
+                ccccccccc  ccccccccc  ccccccccc
+                 aaaaaaa    aaaaaaa    aaaaaaa
+                  rrrrr      rrrrr      rrrrr
+                   rrr        rrr        rrr
+                    e          e          e
+                         *          *
+                        ***        ***
+                       *****      *****
+                      *******    *******
+                     *********  *********
+                     ccccccccc  ccccccccc
+                      aaaaaaa    aaaaaaa
+                       rrrrr      rrrrr
+                        rrr        rrr
+                         e          e
+                              *
+                             ***
+                            *****
+                           *******
+                          *********
+                          ccccccccc
+                           aaaaaaa
+                            rrrrr
+                             rrr
+                              e
+*/
 
 }
