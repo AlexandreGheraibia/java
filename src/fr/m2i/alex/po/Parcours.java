@@ -178,8 +178,8 @@ public class Parcours {
 		
 	}
 /*trace d'éxécution*/
-	
-	                      *
+	 
+	                       *
                              * *
                             *   *
                            *     *
